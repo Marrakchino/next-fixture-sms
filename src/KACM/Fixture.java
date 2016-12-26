@@ -1,4 +1,4 @@
-package KACM;
+package nextfixturesms;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -9,11 +9,7 @@ public class Fixture {
 	private LocalDate date;
 	private String opponent;
 	private String time;
-	public String[] POSSIBLE_OPPONENTS = {"Wydad Casablanca", "Khouribga",
-			"Chabab Atlas Khénifra", "FUS Rabat", "Olympic Safi",
-			"Hassania Agadir", "Ittihad Tanger", "Raja Casablanca",
-			"Kasba Tadla", "KAC Kénitra", "Difaâ El Jadida", "FAR Rabat",
-			"Chabab Rif Hoceima", "RSB Berkane", "Moghreb Tétouan"};
+	public String[] POSSIBLE_OPPONENTS = {""}; // add youre team's potential opponents here (optional)
 	
 	public LocalDate getDate() {
 		return date;
@@ -52,23 +48,13 @@ public class Fixture {
 	private String parseOpponent(String teams)
 	{
 		String possibleOpponent;
-		if (teams.startsWith("Kawkab"))
+		if (teams.startsWith("<your team's name's first word>"))
 		{
-			possibleOpponent = teams.substring(16);
-			/*
-			possibleOpponent = teams.substring(16);
-			if (!isAPossibleOpponent(opponent))
-				possibleOpponent = "";
-				*/
+			possibleOpponent = teams.substring(16); //change this to your team's name size
 		}
 		else
 		{
-			possibleOpponent =  teams.substring(0, teams.indexOf("Kawkab"));
-			/*
-			possibleOpponent =  teams.substring(0, teams.indexOf("Kawkab"));
-			if (!isAPossibleOpponent(possibleOpponent))
-				possibleOpponent = "";
-			*/
+			possibleOpponent =  teams.substring(0, teams.indexOf("<your team's name's first word>"));
 		}
 		return possibleOpponent;
 	}

@@ -1,4 +1,4 @@
-package KACM;
+package nextfixturesms;
 
 import java.io.IOException;
 import java.util.Iterator;
@@ -9,7 +9,8 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class Parser {
-	private static final String SOURCE_URL = "http://www.matchendirect.fr/equipe/kacm-marrakech.html";
+	private static final String SOURCE_URL = "http://www.matchendirect.fr/equipe/*****.html"; 
+	// change this with your team's html page on this website
 	
 	public static Fixture getNextFixture()
 	{
