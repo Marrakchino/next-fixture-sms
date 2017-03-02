@@ -9,11 +9,7 @@ public class Fixture {
 	private LocalDate date;
 	private String opponent;
 	private String time;
-// 	public String[] POSSIBLE_OPPONENTS = {"Wydad Casablanca", "Khouribga",
-			"Chabab Atlas Khénifra", "FUS Rabat", "Olympic Safi",
-			"Hassania Agadir", "Ittihad Tanger", "Raja Casablanca",
-			"Kasba Tadla", "KAC Kénitra", "Difaâ El Jadida", "FAR Rabat",
-			"Chabab Rif Hoceima", "RSB Berkane", "Moghreb Tétouan"};
+	public String[] POSSIBLE_OPPONENTS = {""};
 	
 	public LocalDate getDate() {
 		return date;
