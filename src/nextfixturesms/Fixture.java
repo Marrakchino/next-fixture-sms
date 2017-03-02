@@ -9,12 +9,11 @@ public class Fixture {
 	private LocalDate date;
 	private String opponent;
 	private String time;
-	public String[] POSSIBLE_OPPONENTS = {"Wydad Casablanca", "Khouribga",
+// 	public String[] POSSIBLE_OPPONENTS = {"Wydad Casablanca", "Khouribga",
 			"Chabab Atlas Khénifra", "FUS Rabat", "Olympic Safi",
 			"Hassania Agadir", "Ittihad Tanger", "Raja Casablanca",
 			"Kasba Tadla", "KAC Kénitra", "Difaâ El Jadida", "FAR Rabat",
 			"Chabab Rif Hoceima", "RSB Berkane", "Moghreb Tétouan"};
-// 	public String[] POSSIBLE_OPPONENTS = {""}; // add youre team's potential opponents here (optional)
 	
 	public LocalDate getDate() {
 		return date;
@@ -59,7 +58,7 @@ public class Fixture {
 		}
 		else
 		{
-			possibleOpponent =  teams.substring(0, teams.indexOf("Kawkab"));
+			possibleOpponent =  teams.substring(0, teams.indexOf("<your team's first word"));
 		}
 		return possibleOpponent;
 	}

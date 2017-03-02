@@ -23,17 +23,11 @@ import javax.mail.internet.MimeMessage;
 import org.apache.commons.logging.impl.Log4JLogger;
 
 public class Main {
-	public static final String MAIL_FROM = "nelqatib@gmail.com";
-	public static final String MAIL_TO = "nabilelqatib@gmail.com";
-	public static final String ACCOUNT_SID = "AC197cbdc2ddccb06f2231d1492d55d10b";
-	public static final String AUTH_TOKEN = "9e30e4bd1935339b4c1aebb34942884a";
 
-	/*
 	public static final String MAIL_FROM = "";
 	public static final String MAIL_TO = "";
 	public static final String ACCOUNT_SID = "<put your account sid here>";
 	public static final String AUTH_TOKEN = "<put your authentificatio token here>";
-	*/
 
 	private static final Logger LOGGER = Logger.getLogger(Class.class.getName());
 
@@ -42,13 +36,8 @@ public class Main {
 	    String messageText = prepareMessage(nextFixture);
 	    LOGGER.log(Level.FINE, "Message: ", messageText);
 	    Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
-	    /*
 	    com.twilio.rest.api.v2010.account.Message message = com.twilio.rest.api.v2010.account.Message.creator(new PhoneNumber(""),
 	    	  new PhoneNumber(""),	
-	    	  messageText).create();
-	    */
-	    com.twilio.rest.api.v2010.account.Message message = com.twilio.rest.api.v2010.account.Message.creator(new PhoneNumber("+33664444309"),
-	    	  new PhoneNumber("+33644640210"),	
 	    	  messageText).create();
 		Status messageStatus = message.getStatus();
 		if (messageStatus==Status.FAILED||
@@ -70,10 +59,8 @@ public class Main {
 	
 	/*
 	public static void sendMail(String messageStatus){
-	    final String username = "nelqatib";
-	    final String password = "tfou3lik";
-// 	    final String username = "";
-// 	    final String password = "";
+	    final String username = "";
+	    final String password = "";
 
 	    String host = "smtp.gmail.com"; // replace with your mail smtp server
 
