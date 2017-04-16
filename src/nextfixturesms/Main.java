@@ -26,8 +26,8 @@ public class Main {
 
 	public static final String MAIL_FROM = "";
 	public static final String MAIL_TO = "";
-	public static final String ACCOUNT_SID = "<put your account sid here>";
-	public static final String AUTH_TOKEN = "<put your authentificatio token here>";
+	public static final String ACCOUNT_SID = System.getenv("TWILIO_SID");
+	public static final String AUTH_TOKEN = System.getenv("TWILIO_TOKEN");
 
 	private static final Logger LOGGER = Logger.getLogger(Class.class.getName());
 
